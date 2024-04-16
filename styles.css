@@ -1,0 +1,218 @@
+/* Base styles */
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  /* font-style: normal; */
+}
+
+section {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(0, 0%, 94%);
+}
+
+.container {
+  width: 600px;
+  height: auto;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 32px 32px 180px 32px;
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.line-break {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.line-break button {
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 100%;
+  padding: 16px;
+  border: 0;
+  cursor: pointer;
+}
+
+.line-break img {
+  padding: 16px;
+}
+
+.line-break button:hover {
+  background-color: hsl(0, 0%, 8%);
+}
+
+.date-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.date-container h1 {
+  font-size: 90px;
+  line-height: 1.2;
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+  font-weight: 800;
+  color: hsl(0, 0%, 8%);
+}
+
+span {
+  color: hsl(259, 100%, 65%);
+}
+
+.inputs-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+label {
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  color: hsl(0, 1%, 44%);
+  letter-spacing: 4px;
+}
+
+.input.error input {
+  border-color: hsl(0, 100%, 67%);
+}
+
+.input.error label {
+  color: hsl(0, 100%, 67%);
+}
+
+.input small {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.input.error small {
+  visibility: visible;
+  color: hsl(0, 100%, 67%);
+}
+
+.input {
+  position: relative;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  font-family: inherit;
+}
+
+.input span {
+  padding-top: 5px;
+  font-size: 10px;
+  color: hsl(0, 100%, 67%);
+}
+
+.input-field {
+  height: 60px;
+  width: 120px;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 8px;
+  font-size: 28px;
+  font-weight: 800;
+  padding-left: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.input-field:focus {
+  border-color: hsl(259, 100%, 65%);
+  outline: none;
+}
+
+.input-field::placeholder {
+  color: hsl(0, 1%, 44%);
+}
+
+/* Media query for viewport width up to 600px */
+@media screen and (max-width: 620px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+  section {
+    width: 100%;
+    height: 100%;
+  }
+
+  .container {
+    position: relative;
+    width: 80%;
+    height: auto;
+    padding: 20px;
+    padding: 32px;
+    margin-bottom: 32px;
+  }
+
+  .input {
+    width: 120px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input input {
+    margin-bottom: 24px;
+  }
+
+  .input-field {
+    height: 60px;
+    width: auto;
+    font-size: 24px;
+    font-weight: 800;
+  }
+  .inputs-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .line-break {
+    padding: 40px 0;
+  }
+
+  .line-break button {
+    position: absolute;
+  }
+
+  .line-break img {
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+  }
+
+  .container .date-container h1 {
+    font-size: 70px;
+  }
+}
